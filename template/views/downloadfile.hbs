@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headers}}
+</head>
+<body>
+   {{>navbar}}
+    <a href ="/logout">Log Out</a> &nbsp; &nbsp;
+    <a href="/logoutall">Log Out From all Session</a>&nbsp; &nbsp;
+    <a href="/user">Go to Profile Page</a>&nbsp; &nbsp;
+    <a href="/upload/file">Upload a File</a>&nbsp; &nbsp;
+
+   <div id="pp-pg">
+    <form method="post">
+        <input type="text" placeholder="Enter File Name" required name="fileName" oncopy="return false" onpaste="return false"/><br>
+        <input type="text" placeholder="Enter File Code" required name="code" oncopy="return false" onpaste="return false"/><br>
+        <input type="submit" value="View"/><br>
+    </form>
+
+
+    {{#if error}}
+        <h2>{{error}}</h2>
+    {{/if}}
+    {{#if message}}
+        <a href="{{message}}" target="_blank"> Click Here to Get File Link</a>
+    {{/if}}
+    </div>
+
+
+</body>
+</html>

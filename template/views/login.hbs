@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headers}}
+</head>
+<body>
+    <h1>Login Form</h1>
+    <a href="/register">Create an Account</a>
+    <form action="/login" method="POST">
+
+        <input type="text" placeholder="Enter Username" required name="username" oncopy="return false" onpaste="return false"/><br>
+        <input type="password" placeholder="Enter your password" required name="password" id="typepass" oncopy="return false" onpaste="return false"/>
+        <input type="checkbox" onclick="Toggle()"> <b>Show Password</b><br>
+        <input type="submit" value="Login"/><br>
+        
+    </form>
+    <a href="/register">{{noUserError}}</a>
+    {{#if error}}
+        {{error}}
+    {{/if}}
+</body>
+</html>

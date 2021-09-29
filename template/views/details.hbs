@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headers}}
+</head>
+<body>
+   {{>navbar}}
+   
+    <a href ="/logout">Log Out</a> &nbsp; &nbsp;
+    <a href="/logoutall">Log Out From all Session</a>&nbsp; &nbsp;
+    <a href="/files">View File Names</a>&nbsp; &nbsp;
+    <a href="/upload/file">Upload a File</a>&nbsp; &nbsp;
+    <a href="/download/file">Download a File</a>&nbsp; &nbsp;
+    <br><br>
+    <a href="/update/password">Update Password</a>&nbsp; &nbsp;
+    <a href="/update/details">Update User Details</a>&nbsp; &nbsp;
+    <a href="/delete/user">Delete User</a>&nbsp; &nbsp;
+
+
+
+   <h2>Details Page</h2>
+   <div class="container">     
+
+            <div class="row align-items-start">
+                <div class="col-2">
+                    <h4>Full Name : {{fullName}}</h4>
+                </div>
+                <div class="col-2">
+                    <h4>User Name : {{userName}}</h4>
+                </div>
+                <div class="col-5">
+                    <h4>Email ID : {{email}}</h4><br>
+                </div>
+                <div class="col-2">
+                    <h4>Gender : {{gender}}</h4>
+                </div>
+            </div>
+
+        
+    </div>
+
+</body>
+</html>

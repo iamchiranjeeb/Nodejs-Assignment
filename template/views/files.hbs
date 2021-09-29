@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headers}}
+</head>
+<body>
+   {{>navbar}}
+    <a href ="/logout">Log Out</a> &nbsp; &nbsp;
+    <a href="/logoutall">Log Out From all Session</a>&nbsp; &nbsp;
+    <a href="/user">Go to Profile Page</a> &nbsp; &nbsp;
+    <a href="/upload/file">Upload a File</a>&nbsp; &nbsp;
+    <a href="/download/file">Download a File</a>&nbsp; &nbsp;
+
+
+
+   {{#if files}}
+        <ol>
+            {{#each files}}
+                <h4><li>
+                    File Name:- {{fileName}} &nbsp; &nbsp;
+                    <a href="/update/file/name/{{_id}}">Update File Details</a> &nbsp; &nbsp;
+                    <a href="/update/files/{{_id}}">Update File</a> &nbsp; &nbsp;
+                    <a href="/delete/file/{{_id}}">Delete File</a> &nbsp; &nbsp;
+                </li></h4><br><br>
+            {{/each}}
+        </ol>  
+   {{/if}}
+
+   {{#if error}}
+   <br>
+        <h3>{{error}}</h3>
+   {{/if}}
+
+
+</body>
+</html>

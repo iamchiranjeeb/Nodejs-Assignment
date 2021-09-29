@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+</head>
+
+<body>
+    <a href ="/logout">Log Out</a> &nbsp; &nbsp;
+    <a href="/logoutall">Log Out From all Session</a>&nbsp; &nbsp;
+    <a href="/user">Go to Profile Page</a>&nbsp; &nbsp;
+
+    <h1>Update Page</h1>>
+    <form action="/update/details" method="POST">
+        <input type="text" required placeholder="Enter Your Name" name="fullName" value={{fullName}} /><br>
+        <input type="email" required placeholder="Enter Your Email" name="email" value={{email}} oncopy="return false" onpaste="return false" /><br>
+        <input type="text" required placeholder="Enter User Name" name="username" value={{userName}} /><br>
+
+        
+        <input type="radio" name="gender" value="male" />
+        <span>Male</span><br>
+        <input type="radio" name="gender" value="female" />
+        <span>Female</span><br>
+        
+        <input type="submit" value="Update" />
+    </form>
+
+    {{#if error}}
+            <h2>{{error}}</h2>
+    {{/if}}
+</body>
+
+</html>
